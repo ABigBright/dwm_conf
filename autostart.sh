@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# for application launcher
+albert &
+# for fcitx input framework
+fcitx &
 # for networkmanager systray
 nm-applet &
 # config background pic fill
