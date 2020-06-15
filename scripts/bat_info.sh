@@ -1,8 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
 get_bat_power() {
-    
-    bat_power_tbl=(- - - - -)
+    # bat_power_tbl=(- - - - -)
 
     # echo ${bat_power_tbl[2]}
     bat_power=$(acpi -b 2>/dev/null |awk '{print $4}'|sed -r 's/(.*)%/\1/g')
@@ -14,18 +13,18 @@ get_bat_power() {
 
     if [ $bat_power -eq 0 ]
     then
-        echo $bat_power% ${bat_power_tbl[0]}
+        echo $bat_power% -
     elif [ $bat_power -le 25 ] 
     then
-        echo $bat_power% ${bat_power_tbl[1]}
+        echo $bat_power% -
     elif [ $bat_power -le 50 ]
     then
-        echo $bat_power% ${bat_power_tbl[2]}
+        echo $bat_power% -
     elif [ $bat_power -le 75 ]
     then
-        echo $bat_power% ${bat_power_tbl[3]}
+        echo $bat_power% -
     elif [ $bat_power -le 100 ]
     then
-        echo $bat_power% ${bat_power_tbl[4]}
+        echo $bat_power% -
     fi
 }
