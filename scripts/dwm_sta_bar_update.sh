@@ -2,13 +2,13 @@
 
 if [ $# -lt 1 ]
 then
-    exit -1
+    exit 2
 fi
 
-source ./mem_info.sh
-source ./net_recv_update.sh
-source ./audio_info.sh
-source ./ac_info.sh
+. ./mem_info.sh
+. ./net_recv_update.sh
+. ./audio_info.sh
+. ./ac_info.sh
 
 while [ 1 ]; do
     dwm_mem_info=$(get_avail_mem)
@@ -17,5 +17,5 @@ while [ 1 ]; do
     dwm_aud_volume=$(get_audio_volume)
     dwm_ac_plug=$(get_ac_plug)
     xsetroot -name " $dwm_mem_info ﬠ $dwm_net_recv_speed ﬢ $dwm_net_send_speed $dwm_aud_volume $dwm_ac_plug "
-    usleep $1
+    sleep $1
 done
