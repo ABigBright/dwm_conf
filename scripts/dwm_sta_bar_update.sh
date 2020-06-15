@@ -5,10 +5,14 @@ then
     exit 2
 fi
 
-. ./mem_info.sh
-. ./net_recv_update.sh
-. ./audio_info.sh
-. ./ac_info.sh
+dwm_script_prefix=~/.dwm/scripts
+
+. $dwm_script_prefix/mem_info.sh
+. $dwm_script_prefix/net_recv_update.sh
+. $dwm_script_prefix/audio_info.sh
+. $dwm_script_prefix/ac_info.sh
+. $dwm_script_prefix/date_info.sh
+. $dwm_script_prefix/bat_info.sh
 
 while [ 1 ]; do
     dwm_mem_info=$(get_avail_mem)
@@ -16,6 +20,7 @@ while [ 1 ]; do
     dwm_net_send_speed=$(get_net_send_speed)
     dwm_aud_volume=$(get_audio_volume)
     dwm_ac_plug=$(get_ac_plug)
-    xsetroot -name " $dwm_mem_info ﬠ $dwm_net_recv_speed ﬢ $dwm_net_send_speed $dwm_aud_volume $dwm_ac_plug "
+    dwm_bat_power=$(get_bat_power)
+    xsetroot -name "   $dwm_mem_info ﬠ $dwm_net_recv_speed ﬢ $dwm_net_send_speed $dwm_aud_volume $dwm_ac_plug $dwm_bat_power $(get_date) "
     sleep $1
 done
