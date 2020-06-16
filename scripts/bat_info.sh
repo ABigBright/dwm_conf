@@ -29,5 +29,3 @@ get_bat_power() {
         echo $bat_power% ${bat_power_tbl[4]}
     fi
 }
-
-get_bat_power

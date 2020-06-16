@@ -10,3 +10,7 @@ nm-applet &
 feh --bg-scale /home/briq/win/e/pic/star.jpg
 # config compositor for window manager
 picom &
+
+# show info on status bar
+killall dwm_sta_bar_update
+./scripts/dwm_sta_bar_update.sh 1 &

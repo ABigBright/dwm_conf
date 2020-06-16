@@ -21,6 +21,6 @@ while [ 1 ]; do
     dwm_aud_volume=$(get_audio_volume)
     dwm_ac_plug=$(get_ac_plug)
     dwm_bat_power=$(get_bat_power)
-    xsetroot -name "   $dwm_mem_info ﬠ $dwm_net_recv_speed ﬢ $dwm_net_send_speed $dwm_aud_volume $dwm_ac_plug $dwm_bat_power $(get_date) "
+    xsetroot -name "   $dwm_mem_info ﬠ $dwm_net_recv_speed ﬢ $dwm_net_send_speed $dwm_aud_volume [ $dwm_ac_plug,$dwm_bat_power ] $(get_date) "
     sleep $1
 done
