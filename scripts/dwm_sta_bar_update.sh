@@ -16,6 +16,7 @@ dwm_script_prefix=~/.dwm/scripts
 
 while [ 1 ]; do
     dwm_mem_info=$(get_avail_mem)
+    net_query_update
     dwm_net_recv_speed=$(get_net_recieve_speed)
     dwm_net_send_speed=$(get_net_send_speed)
     dwm_aud_volume=$(get_audio_volume)
