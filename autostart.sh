@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# for udisk automount
+udiskie &
 # for application launcher
 albert &
 # for fcitx input framework
