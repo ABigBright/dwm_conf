@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# for screenshot 
+flameshot &
 # for udisk automount
 udiskie &
 # for application launcher
