@@ -12,8 +12,6 @@ fcitx &
 nm-applet &
 # for bluetooth systray
 blueman-applet &
-# config background pic fill
-feh --bg-scale /home/briq/win/d/work/wallpaper/star.jpg
 # config compositor for window manager
 picom &
 

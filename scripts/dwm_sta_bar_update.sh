@@ -14,6 +14,7 @@ dwm_script_prefix=~/.dwm/scripts
 . $dwm_script_prefix/date_info.sh
 . $dwm_script_prefix/bat_info.sh
 . $dwm_script_prefix/brightness_info.sh
+. $dwm_script_prefix/wallpaper_random.sh 30 & # 30s random change
 
 while [ 1 ]; do
     dwm_mem_info=$(get_avail_mem)
