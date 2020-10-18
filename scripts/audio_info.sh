@@ -1,10 +1,10 @@
 #!/bin/bash
 
 get_audio_volume() {
-    aud_vol=$(amixer get Master |tail -n1|awk '{print $(NF-1)}'|sed -r 's/\[(.*)%\]/\1/g')
-    aud_mute=$(amixer get Master |tail -n1|awk '{print $(NF)}'|sed -r 's/\[(.*)\]/\1/g')
+    aud_vol=$(pactl list sinks|awk '$1 ~ /Volume/'|awk '{print $5}'|sed -r 's/(.*)%/\1/g')
+    aud_mute=$(pactl list sinks|awk '/Mute/ {print $2}')
 
-    if [ $aud_mute = "off" -o $aud_vol = "0" ] 
+    if [ $aud_mute = "yes" -o $aud_vol = "0" ] 
     then
         aud_vol=0
     fi
