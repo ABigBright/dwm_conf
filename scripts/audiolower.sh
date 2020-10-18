@@ -1,5 +1,6 @@
 #!/bin/zsh
 
 echo start exec $@ ...
-pactl set-sink-volume 0 -$1%
+sink_index=$(pactl list sinks|awk '/Sink/ {print $2}'|sed -r  's/#(.*)/\1/g')
+pactl set-sink-volume $sink_index -$1%
 echo end exec $@ ...

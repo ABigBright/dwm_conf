@@ -1,5 +1,6 @@
 #!/bin/zsh
 
 echo start exec $@ ...
-pactl set-sink-mute 0 toggle
+sink_index=$(pactl list sinks|awk '/Sink/ {print $2}'|sed -r  's/#(.*)/\1/g')
+pactl set-sink-mute $sink_index toggle
 echo end exec $@ ...
