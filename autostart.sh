@@ -17,4 +17,5 @@ picom &
 
 # show info on status bar
 killall dwm_sta_bar_update
-./scripts/dwm_sta_bar_update.sh 2 &
+
+exec ./scripts/dwm_sta_bar_update.sh 2
