@@ -11,9 +11,9 @@ get_audio_volume() {
 
     if [ $aud_vol = "0" ]
     then
-        echo "婢"
+        echo -e "\Uf075f"
     else
-        echo "墳 $aud_vol"
+        echo -e "\ue638 $aud_vol"
     fi
 
 }

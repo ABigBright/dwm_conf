@@ -25,6 +25,8 @@ while [ 1 ]; do
     dwm_ac_plug=$(get_ac_plug)
     dwm_bat_power=$(get_bat_power)
     dwm_bright_level=$(get_bright)
-    xsetroot -name "   $dwm_mem_info ﬠ $dwm_net_recv_speed ﬢ $dwm_net_send_speed $dwm_aud_volume $dwm_bright_level [ $dwm_ac_plug,$dwm_bat_power ] $(get_date) "
+    xsetroot -name " `echo -e "\Uf17a9"`  $dwm_mem_info `echo -e "\uf063"` $dwm_net_recv_speed `echo -e "\uf062"` $dwm_net_send_speed $dwm_aud_volume $dwm_bright_level [ $dwm_ac_plug,$dwm_bat_power ] $(get_date) "
     sleep $1
 done
+
+󱞩
