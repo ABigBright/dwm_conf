@@ -10,9 +10,9 @@ get_ac_plug() {
 
     if [ $ac_plug = "off-line" ]
     then
-        echo -e "ﮤ"
+        echo -e "DC"
     else
-        echo -e "ﮣ"
+        echo -e "AC"
     fi
 
 }
