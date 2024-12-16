@@ -16,6 +16,6 @@ blueman-applet &
 picom &
 
 # show info on status bar
-killall dwm_sta_bar_update
+killall dwm_sta_bar_update.sh wallpaper_random.sh
 
 exec ./scripts/dwm_sta_bar_update.sh 2
